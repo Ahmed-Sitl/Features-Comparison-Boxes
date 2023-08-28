@@ -1,0 +1,147 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.container {
+    background-color: #eee;
+    padding: 100px 50px;
+    display: flex;
+}
+
+.basic,
+.professinal {
+    width: 50%;
+    padding: 10px;
+    position: relative;
+}
+
+h3 {
+    padding: 15px;
+    color: white;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.basic h3 {
+    background-color: #f44336;
+}
+
+.professinal h3 {
+    background-color: #2196f3;
+}
+
+.content {
+    background-color: white;
+    position: relative;
+}
+
+.content p {
+    position: relative;
+    padding: 20px;
+    padding-left: 40px;
+}
+
+.content p::after {
+    content: '';
+    width: 100%;
+    height: 1px;
+    background-color: #eee;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+
+.content .box {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    position: absolute;
+    margin-top: 20px;
+    left: 10px;
+}
+
+.content .box.true {
+    background-color: #009688;
+}
+
+.content .box.true::before {
+    content: '';
+    width: 2px;
+    height: 5px;
+    background-color: #fdfefe;
+    transform: rotate(-50deg) translate(-50%, -50%);
+    position: absolute;
+    top: 50%;
+    left: 42%;
+}
+
+.content .box.true::after {
+    content: '';
+    width: 2px;
+    height: 10px;
+    background-color: #fdfefe;
+    transform: rotate(39deg) translate(-50%, -50%);
+    position: absolute;
+    top: 42%;
+    left: 38%;
+}
+
+.content .box.false {
+    background-color: #e91e63;
+}
+
+.content .box.false::before {
+    content: '';
+    width: 2px;
+    height: 10px;
+    background-color: #fdfefe;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.content .box.false::after {
+    content: '';
+    width: 2px;
+    height: 10px;
+    background-color: #fdfefe;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+
+.professinal::before {
+    content: 'Save 50%';
+    color: #fdfefe;
+    font-weight: bold;
+    font-size: 19px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 20px;
+    width: 130px;
+    height: 45px;
+    background-color: #2196f3;
+    position: absolute;
+    top: -50px;
+    right: 15px;
+}
+
+.professinal::after {
+    content: '';
+    position: absolute;
+    border: 22.5px solid transparent;
+    border-right-color: #eee;
+    top: -50px;
+    right: 15px;
+}
